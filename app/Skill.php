@@ -6,4 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 class Skill extends Model
 {
 	protected $fillable = ['id','name','description'];
+
+	public function user()
+    {
+    	return $this->belongsTo(User::class);
+    }
 }
