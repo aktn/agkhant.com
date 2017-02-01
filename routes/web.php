@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +20,9 @@ Route::get('/', function () {
 // Skill CRUD
 */
 Route::resource('skill','SkillController');
+
+/*
+//AUTH LOGIN
+*/
+Route::get('auth/login','Auth\AuthController@getLogin');
+Route::post('auth/login','Auth\AuthController@postLogin');
