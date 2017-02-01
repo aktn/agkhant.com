@@ -27,8 +27,9 @@ class SkillController extends Controller
 
 	public function edit($id)
 	{
-		$skill = Skill::where('user_id',Auth::user()->id)->firstOrFail();
-    	return view('skill.edit',compact('edit'));
+		//$skill = Skill::where('user_id',Auth::user()->id)->firstOrFail();
+		$skill = Skill::find($id);
+    	return view('skill.edit',compact('skill'));
 	}
 
 	public function update($id)
