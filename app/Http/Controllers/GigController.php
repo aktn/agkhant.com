@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Gig;
 use App\User;
 use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class GigController extends Controller
 {
@@ -48,18 +48,6 @@ class GigController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $gig = Gig::find($id);
-        return view('gig.show');
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -68,7 +56,7 @@ class GigController extends Controller
     public function edit($id)
     {
         $gig = Gig::find($id);
-        return view('gig.edit',compact('edit'));
+        return view('gig.edit',compact('gig'));
     }
 
     /**
@@ -81,9 +69,8 @@ class GigController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'name' => 'required',
-            'description' => 'required',
-            'image' => 'required'
+            'title' => 'required',
+            'description' => 'required'
         ]);
 
         Gig::find($id)->update($request->all());

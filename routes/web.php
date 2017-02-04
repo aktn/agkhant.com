@@ -17,9 +17,13 @@ Route::get('/', function () {
 
 
 /*
-// Skill CRUD
+// CRUD
 */
 Route::resource('skill','SkillController');
+Route::resource('gig','GigController');
+
+
+
 
 /*
 //AUTH LOGIN
