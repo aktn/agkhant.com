@@ -32,7 +32,7 @@ class SkillController extends Controller
     	return view('skill.edit',compact('skill'));
 	}
 
-	public function update($id)
+	public function update(Request $request, $id)
 	{
 		$this->validate($request,[
 			'name' => 'required',
