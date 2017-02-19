@@ -25,6 +25,9 @@ Route::resource('gig','GigController');
 
 
 
+// Profile CRUD
+Route::resource('profile','ProfileController');
+
 /*
 //AUTH LOGIN
 */
