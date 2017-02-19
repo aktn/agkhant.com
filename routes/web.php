@@ -21,6 +21,9 @@ Route::get('/', function () {
 */
 Route::resource('skill','SkillController');
 
+// Profile CRUD
+Route::resource('profile','ProfileController');
+
 /*
 //AUTH LOGIN
 */
