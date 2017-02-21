@@ -35,7 +35,8 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        return view('profile.show');
+        $profile = Profile::find($id);
+        return view('profile.show',compact('profile'));
     }
 
     /**

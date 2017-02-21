@@ -22,8 +22,43 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
 
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-haspopup="true" aria-expanded="false">Profile
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/profile/1/edit">Edit</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-haspopup="true" aria-expanded="false">Skill
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/skill/create">Create</a></li>
+                    <li><a href="/skill/">List</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-haspopup="true" aria-expanded="false">Gig
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/gig/create">Create</a></li>
+                    <li><a href="/gig/">List</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
     @yield('content')
+
+
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
